@@ -15,12 +15,16 @@ public class AvaliacaoAtendimento {
                 break;
             case 2:
                 descricaoNota = "Ruim";
+                break;
             case 3:
                 descricaoNota = "Razoável";
+                break;
             case 4:
                 descricaoNota = "Muito bom";
+                break;
             case 5:
                 descricaoNota = "Excelente";
+                break;
             default:
                 descricaoNota = "Opção Invalida";
 

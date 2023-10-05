@@ -5,4 +5,5 @@ public class Carro {
     String cor;
     int anoFabricacao;
 
+    Pessoa proprietario;
 }

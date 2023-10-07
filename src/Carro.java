@@ -6,5 +6,5 @@ public class Carro {
     int anoFabricacao = 2022;
 
 
-    Pessoa proprietario;
+    Pessoa proprietario = new Pessoa();
 }

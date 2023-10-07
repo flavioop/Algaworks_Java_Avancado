@@ -1,9 +1,10 @@
 public class Carro {
 
-    String fabricante;
-    String modelo;
-    String cor;
-    int anoFabricacao;
+    String fabricante =  "Ford";
+    String modelo =  "";
+    String cor=  "";
+    int anoFabricacao = 2022;
+
 
     Pessoa proprietario;
 }

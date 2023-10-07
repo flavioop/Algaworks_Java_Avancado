@@ -1,18 +1,28 @@
 public class TesteInicializacao {
 
     public static void main(String[] args) {
+
+        Pessoa pessoa1 = new Pessoa();
+        pessoa1.nome = "João";
+
+        Pessoa pessoa2 = new Pessoa();
+        pessoa2.nome = "Maria";
+
         Carro meuCarro = new Carro();
+        meuCarro.modelo = "HRV";
 
-        meuCarro.fabricante = "Honda";
-        meuCarro.anoFabricacao = 2021;
-        meuCarro.proprietario.nome = "Maria"
+        Carro seuCarro = new Carro();
+        seuCarro.modelo = "X6";
 
-        Pessoa proprietarioAntigo = meuCarro.proprietario;
+        meuCarro.proprietario = pessoa1;
+        seuCarro.proprietario = pessoa2;
 
-        System.out.println(meuCarro.fabricante);
-        System.out.println(meuCarro.modelo);
-        System.out.println(meuCarro.anoFabricacao);
+        meuCarro.proprietario.nome = "Sebastião";
+
         System.out.println(meuCarro.proprietario.nome);
+        System.out.println(seuCarro.proprietario.nome);
+
+
 
     }
 }

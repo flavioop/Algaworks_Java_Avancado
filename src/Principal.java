@@ -19,6 +19,7 @@ public class Principal {
         meuCarro.fabricante = "Honda";
         meuCarro.modelo = "HR-V";
         meuCarro.proprietario = voce;
+        meuCarro.precoCompra = 120000;
         meuCarro.calcularValorRevenda();
 
         seuCarro.anoFabricacao = 2022;
@@ -26,6 +27,7 @@ public class Principal {
         seuCarro.fabricante = "BMW";
         seuCarro.modelo = "X6";
         seuCarro.proprietario = voce;
+        seuCarro.precoCompra = 98000;
         seuCarro.calcularValorRevenda();
 
 

@@ -19,16 +19,18 @@ public class Principal {
         meuCarro.fabricante = "Honda";
         meuCarro.modelo = "HR-V";
         meuCarro.proprietario = voce;
+        meuCarro.calcularValorRevenda();
 
         seuCarro.anoFabricacao = 2022;
         seuCarro.cor = "Branco";
         seuCarro.fabricante = "BMW";
         seuCarro.modelo = "X6";
         seuCarro.proprietario = voce;
+        seuCarro.calcularValorRevenda();
 
 
 
-        System.out.printf("Modelo: %s%n", meuCarro.modelo);
+        /*System.out.printf("Modelo: %s%n", meuCarro.modelo);
         System.out.printf("Ano: %s%n", meuCarro.anoFabricacao);
         System.out.printf("Ano: %s%n", meuCarro.proprietario.nome);
 
@@ -36,7 +38,7 @@ public class Principal {
 
         System.out.printf("Modelo: %s%n", seuCarro.modelo);
         System.out.printf("Ano: %s%n", seuCarro.anoFabricacao);
-        System.out.printf("Ano: %s%n", seuCarro.proprietario.nome);
+        System.out.printf("Ano: %s%n", seuCarro.proprietario.nome);*/
 
 
 

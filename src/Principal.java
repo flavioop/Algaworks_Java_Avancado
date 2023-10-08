@@ -31,7 +31,6 @@ public class Principal {
         seuCarro.calcularValorRevenda();
 
 
-
         /*System.out.printf("Modelo: %s%n", meuCarro.modelo);
         System.out.printf("Ano: %s%n", meuCarro.anoFabricacao);
         System.out.printf("Ano: %s%n", meuCarro.proprietario.nome);

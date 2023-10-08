@@ -23,7 +23,6 @@ public class Carro {
         System.out.printf("Valor de revenda: %6.2f%n", valorRevenda);
 
 
-
     }
 
 }

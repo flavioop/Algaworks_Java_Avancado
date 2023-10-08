@@ -21,9 +21,14 @@ public class Principal {
         meuCarro.proprietario = voce;
         meuCarro.precoCompra = 120000;
 
-        double valorRevenda = meuCarro.calcularValorRevenda();
-        System.out.printf("Tempo de uso (anos): %d%n", meuCarro.anoFabricacao);
-        System.out.printf("Valor de revenda: %6.2f%n", valorRevenda);
+        meuCarro.imprimirResumoDepreciacao();
+        seuCarro.imprimirResumoDepreciacao();
+
+
+        /*double valorRevenda = meuCarro.calcularValorRevenda();
+
+        int tempoDeUsoMeuCarro = meuCarro.calcularTempoDeUsoEmAnos();*/
+
 
 
 

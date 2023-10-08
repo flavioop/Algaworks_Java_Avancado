@@ -19,7 +19,14 @@ public class Principal {
         meuCarro.fabricante = "Honda";
         meuCarro.modelo = "HR-V";
         meuCarro.proprietario = voce;
-        meuCarro.precoCompra = 120000;
+        meuCarro.precoCompra = 0;
+
+        seuCarro.anoFabricacao = 2022;
+        seuCarro.cor = "Branco";
+        seuCarro.fabricante = "BMW";
+        seuCarro.modelo = "X6";
+        seuCarro.proprietario = voce;
+        seuCarro.precoCompra = 98000;
 
         meuCarro.imprimirResumoDepreciacao();
         seuCarro.imprimirResumoDepreciacao();
@@ -37,12 +44,7 @@ public class Principal {
         /*System.out.println(meuCarro.calcularValorRevenda());*/
 
 
-        seuCarro.anoFabricacao = 2022;
-        seuCarro.cor = "Branco";
-        seuCarro.fabricante = "BMW";
-        seuCarro.modelo = "X6";
-        seuCarro.proprietario = voce;
-        seuCarro.precoCompra = 98000;
+
         /*seuCarro.calcularValorRevenda();*/
 
 

@@ -11,7 +11,7 @@ public class Carro {
         double valorRevenda = calcularValorRevenda();
         int tempoDeUsoMeuCarro = calcularTempoDeUsoEmAnos();
 
-        if (precoCompra <=0){
+        if (precoCompra <=0 ){
             System.out.println("Carro com preço de compra zerado. Não foi possível imprimir resumo de depreciação!");
             return;
         }

@@ -31,7 +31,6 @@ public class Principal {
         meuCarro.imprimirResumoDepreciacao();
         seuCarro.imprimirResumoDepreciacao();
 
-
         /*double valorRevenda = meuCarro.calcularValorRevenda();
 
         int tempoDeUsoMeuCarro = meuCarro.calcularTempoDeUsoEmAnos();*/

@@ -1,9 +1,6 @@
 public class CalculadoraIMC {
 
-    double peso;
-    double altura;
-
-    IndMassaCorporal calcular(){
+    IndMassaCorporal calcular(double peso, double altura){
 
         IndMassaCorporal imc = new IndMassaCorporal();
         imc.resultado = peso / (altura * altura);

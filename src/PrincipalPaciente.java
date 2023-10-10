@@ -3,10 +3,11 @@ public class PrincipalPaciente {
     public static void main(String[] args) {
 
         CalculadoraIMC calculadoraIMC = new CalculadoraIMC();
-        calculadoraIMC.altura = 1.82;
-        calculadoraIMC.peso = 175;
 
-        IndMassaCorporal imc = calculadoraIMC.calcular();
+        double peso = 175;
+        double altura = 1.82;
+
+        IndMassaCorporal imc = calculadoraIMC.calcular(peso,altura);
 
         if (imc.estaComObesidade()){
             System.out.printf("Paciente com altura de %.2f e peso de %.2f " + "está com obesidade%n", imc.altura, imc.peso);

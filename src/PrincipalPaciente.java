@@ -2,11 +2,11 @@ public class PrincipalPaciente {
 
     public static void main(String[] args) {
 
-        Paciente paciente  = new Paciente();
-        paciente.altura = 1.82;
-        paciente.peso = 175;
+        CalculadoraIMC calculadoraIMC = new CalculadoraIMC();
+        calculadoraIMC.altura = 1.82;
+        calculadoraIMC.peso = 175;
 
-        IndMassaCorporal imc = paciente.calcularIndiceMassaCorporal();
+        IndMassaCorporal imc = calculadoraIMC.calcular();
 
         if (imc.estaComObesidade()){
             System.out.printf("Paciente com altura de %.2f e peso de %.2f " + "está com obesidade%n", imc.altura, imc.peso);

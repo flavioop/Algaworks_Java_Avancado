@@ -1,11 +1,8 @@
 public class ServicoPrecificacao {
 
-    void calcularPrecoVenda(Double precoCusto){
+    void definirPrecoVenda(Produto produto, double percentualMargemLucro){
 
-        //adiciona 20% de margem de lucro
-        Double precoVenda = precoCusto *1.20;
-
-
+        produto.precoVenda = produto.precoCusto * ((percentualMargemLucro /100) +  1) ;
 
 
     }

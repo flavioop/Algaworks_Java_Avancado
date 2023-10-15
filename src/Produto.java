@@ -4,9 +4,11 @@ public class Produto {
     double precoCusto;
     double precoVenda;
 
+    static double calcularCustosTotais(Produto produto){
+        return produto.precoCusto + Produto.custoEmbalagem;
+    }
 
-
-    void alterarPrecoCusto(Double precoCusto){
+    void alterarPrecoCusto(double precoCusto){
         this.precoCusto = precoCusto;
     }
 

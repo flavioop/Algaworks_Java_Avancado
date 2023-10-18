@@ -21,7 +21,16 @@ public class PrincipalAlunos {
         aluno1.nome = "Laura";
         aluno1.idade = 4;
 
+        Aluno aluno2 = new Aluno();
+        aluno2.nome = "Pedro";
+        aluno2.idade = 8;
+
         turmaB.alunos[2] = aluno1;
+
+
+        turmaB.adicionarAluno(aluno1);
+        turmaB.adicionarAluno(aluno2);
+
 
         turmaB.imprimirListadeAlunos();
         /*for (int i = 0; i < turmaB.alunos.length;i++){

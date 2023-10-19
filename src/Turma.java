@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Turma {
@@ -5,23 +6,20 @@ public class Turma {
     String identificacao;
     String nomeProfessora;
 
-    Aluno []alunos = new Aluno[0];
-//copiando e adicioando no array
+    ArrayList<Aluno>  alunos = new ArrayList<>();
+
     void adicionarAluno(Aluno aluno){
-        this.alunos = Arrays.copyOf(this.alunos, this.alunos.length +1);
-        alunos[alunos.length -1] = aluno;
+        alunos.add(aluno);
 
     }
 
+    void removerAluno(int indice){
+        alunos.remove(indice);
+    }
 
     void imprimirListadeAlunos(){
         for (Aluno aluno:alunos) {
-            if (aluno != null){
-                System.out.printf("%s (%d anos)%n",aluno.nome, aluno.idade);
-            }else{
-                System.out.println("vago");
-                System.out.println("");
-            }
+            System.out.printf("%s (%d anos)%n", aluno.nome, aluno.idade);
         }
 
     }

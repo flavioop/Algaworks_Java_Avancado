@@ -1,19 +1,36 @@
 public class PrincipalArrayIrregular {
 
     public static void main(String[] args) {
-        String[][] cidades = new String[3][];
-        cidades[0] = new String[3];
+        String[][] todasCidades = new String[3][];
+        todasCidades[0] = new String[3];
 
-        cidades[0][0] = "Uberlandia";
-        cidades[0][1] = "Uberaba";
-        cidades[0][0] = "Belo Horizonte";
+        todasCidades[0][0] = "Uberlandia";
+        todasCidades[0][1] = "Uberaba";
+        todasCidades[0][0] = "Belo Horizonte";
 
-        cidades[1] = new String[2];
-        cidades[1][0] = "São Paulo";
-        cidades[1][1] = "Ribeirão Preto";
+        todasCidades[1] = new String[2];
+        todasCidades[1][0] = "São Paulo";
+        todasCidades[1][1] = "Ribeirão Preto";
 
-        cidades[2] = new String[1];
-        cidades[2][0] = "Fortaleza";
+        todasCidades[2] = new String[1];
+        todasCidades[2][0] = "Fortaleza";
+
+       /* for (int i = 0; i < todasCidades.length; i++){
+            for(int j = 0; j < todasCidades[i].length; j++){
+                /*System.out.println(todasCidades[i][j]);
+                System.out.println();*/
+               /* System.out.printf("[%d][%d] = %s%n", i, j, todasCidades[i][j]);
+            }
+        }*/
+
+        for (String[] cidadesPorEstado : todasCidades) {
+            for(String cidade: cidadesPorEstado){
+                System.out.println(cidade);
+
+            }
+
+
+        }
 
 
     }

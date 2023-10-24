@@ -10,12 +10,14 @@ public class PrincipalFaturaCobranca {
         //servicoDeCobranca.pagar(fatura, emailCobranca);
 
 
-        servicoDeCobranca.pagar(fatura, new String[]{"joao@algaworks.com.br","maria@algaworks.com.br" } );
+        //servicoDeCobranca.pagar(fatura, new String[]{"joao@algaworks.com.br","maria@algaworks.com.br" } );
 
         //servicoDeCobranca.pagar(fatura, new String[0]);
         //servicoDeCobranca.pagar(fatura, new String[]{});
 
         //servicoDeCobranca.pagar(fatura, ...emailsCobranca: "joao@algaworks.com.br","maria@algaworks.com.br");
+
+          servicoDeCobranca.pagar(fatura,"joao@algaworks.com.br","maria@algaworks.com.br"  );
 
     }
 }

@@ -1,8 +1,10 @@
 import java.util.Objects;
+import java.util.UUID;
 
 public class ProdutoConstrutor {
 
     String nome;
+    final String codigo;
     static final int QUANTIDADE_INICAL_ESTOQUE = 80;
     int quantidaEstoque;
 
@@ -33,6 +35,7 @@ public class ProdutoConstrutor {
         }
         this.nome = nome;
         this.quantidaEstoque = estoqueInicial;
+        this.codigo = UUID.randomUUID().toString();
     }
 
 

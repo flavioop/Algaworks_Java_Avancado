@@ -1,3 +1,5 @@
+package com.algaworks.erp.estoque;
+
 import java.util.Objects;
 import java.util.UUID;
 
@@ -12,7 +14,7 @@ public class ProdutoConstrutor {
         this("sem nome");
     }
 
-    /*ProdutoConstrutor(){
+    /*erp.estoque.ProdutoConstrutor(){
         this.nome = "sem nome";
         this.quantidaEstoque = QUANTIDADE_INICAL_ESTOQUE;
     }*/

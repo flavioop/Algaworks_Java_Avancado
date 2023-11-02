@@ -1,3 +1,7 @@
+package erp;
+
+import com.algaworks.erp.estoque.ProdutoConstrutor;
+
 public class PrincipalConstrutor {
     public static void main(String[] args) {
 

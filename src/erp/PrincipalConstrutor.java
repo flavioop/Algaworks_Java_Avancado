@@ -10,7 +10,7 @@ public class PrincipalConstrutor {
 
         ProdutoConstrutor produto1 = new ProdutoConstrutor("Picanha 1Kg (peça)", 100);
         ProdutoConstrutor produto2 = new ProdutoConstrutor("Maminha 1Kg (peça)");
-        /*ProdutoConstrutor produto3 = new ProdutoConstrutor();*/
+        ProdutoConstrutor produto3 = new ProdutoConstrutor();
 
 
         System.out.println(produto1.codigo);

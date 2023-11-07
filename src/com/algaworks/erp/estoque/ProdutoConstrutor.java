@@ -5,12 +5,13 @@ import java.util.UUID;
 
 public class ProdutoConstrutor {
 
-    String nome;
+    public String nome;
     public final String codigo;
-    static final int QUANTIDADE_INICAL_ESTOQUE = 80;
-    int quantidaEstoque;
+    public static final int QUANTIDADE_INICAL_ESTOQUE = 80;
+    public int quantidaEstoque;
 
-    ProdutoConstrutor(){
+    public ProdutoConstrutor(){
+
         this("sem nome");
     }
 

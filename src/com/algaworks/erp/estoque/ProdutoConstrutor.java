@@ -5,10 +5,11 @@ import java.util.UUID;
 
 public class ProdutoConstrutor {
 
-    public String nome;
-    public final String codigo;
-    public static final int QUANTIDADE_INICAL_ESTOQUE = 80;
-    public int quantidaEstoque;
+    private String nome;
+
+    private final String codigo;
+    private static final int QUANTIDADE_INICAL_ESTOQUE = 80;
+    private int quantidaEstoque;
 
     public ProdutoConstrutor(){
 
@@ -22,7 +23,7 @@ public class ProdutoConstrutor {
 
 
 
-   public ProdutoConstrutor(String nome ){
+    public ProdutoConstrutor(String nome ){
        this(nome, QUANTIDADE_INICAL_ESTOQUE);
 
         /*Objects.requireNonNull(nome, "Nome é obrigatório");
@@ -40,7 +41,11 @@ public class ProdutoConstrutor {
         }
         this.nome = nome;
         this.quantidaEstoque = estoqueInicial;
-        this.codigo = UUID.randomUUID().toString();
+        this.codigo = gerarCodigo();
+    }
+
+    private String gerarCodigo(){
+        return UUID.randomUUID().toString();
     }
 
 

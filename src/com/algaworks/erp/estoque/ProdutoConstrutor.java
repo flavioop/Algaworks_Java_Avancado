@@ -48,6 +48,12 @@ public class ProdutoConstrutor {
         return UUID.randomUUID().toString();
     }
 
+class Fornecedor{
 
+}
+
+class Categoria{
+
+}
 
 }

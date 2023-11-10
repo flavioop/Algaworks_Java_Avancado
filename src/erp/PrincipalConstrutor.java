@@ -12,7 +12,7 @@ public class PrincipalConstrutor {
         ProdutoConstrutor produto2 = new ProdutoConstrutor("Maminha 1Kg (peça)");
         ProdutoConstrutor produto3 = new ProdutoConstrutor();
 
-
+/*
         System.out.println(produto1.codigo);
         System.out.println(produto1.nome);
         System.out.println(produto1.quantidaEstoque);
@@ -24,7 +24,7 @@ public class PrincipalConstrutor {
         System.out.println(produto3.codigo);
         System.out.println(produto3.nome);
         System.out.println(produto3.quantidaEstoque);
-
+*/
     }
 
 }

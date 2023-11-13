@@ -2,6 +2,7 @@ package com.algaworks.agenda;
 
 public class Horario {
 
+
     private int hora;
     private int minuto;
 
@@ -10,6 +11,11 @@ public class Horario {
         setMinuto(minuto);
     }
 
+    public int getHora() {
+        return hora;
+    }
+
+
 
     public void setHora(int hora) {
         if (hora < 0 || hora > 23){
@@ -17,6 +23,10 @@ public class Horario {
         }
 
         this.hora = hora;
+    }
+
+    public int getMinuto() {
+        return minuto;
     }
 
     public void setMinuto(int minuto) {
@@ -28,13 +38,7 @@ public class Horario {
         this.minuto = minuto;
     }
 
-    public int getHora() {
-        return hora;
-    }
 
-    public int getMinuto() {
-        return minuto;
-    }
 
     public String formatar(){
       return   String.format("%dh%dm", getHora(), getMinuto());

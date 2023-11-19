@@ -8,8 +8,8 @@ public class Principal {
         //System.out.printf("%dh%dm", horario.getHora(), horario.getMinuto());
         Agendamento agendamentoCabelo = new Agendamento(horario, "Corte de cabelo");
 
-        horario.setHora(11);
-        horario.setMinuto(45);
+        //horario.setHora(11);
+        //horario.setMinuto(45);
         Agendamento agendamentoBarba = new Agendamento(horario, "Feitio de barba");
 
         imprimir(agendamentoCabelo);

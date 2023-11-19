@@ -11,7 +11,9 @@ public class Agendamento {
 
     }
 
+
     public Horario getHorario() {
+
         return new Horario(horario.getHora(), horario.getMinuto());
     }
 
@@ -21,11 +23,13 @@ public class Agendamento {
 
 
     public void setDescricao(String descricao) {
+
         this.descricao = descricao;
     }
 
 
     public String getHorarioFormatado(){
+
         return horario.formatar();
     }
 }

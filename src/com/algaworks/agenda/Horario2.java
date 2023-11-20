@@ -1,10 +1,8 @@
 package com.algaworks.agenda;
 
-public record Horario(int hora, int minuto) {
+public record Horario2(int hora, int minuto) {
 
-
-    public Horario {
-
+    public Horario2 { //construtor compacto
         if (hora < 0 || hora > 23) {
             throw new IllegalArgumentException("Hora invalida: " + hora);
         }
@@ -16,8 +14,11 @@ public record Horario(int hora, int minuto) {
 
     }
 
-    public String formatar() {
+        //this.hora = hora;
+        //this.minuto = minuto;
 
-        return String.format("%dh%dm", hora(), minuto());
-    }
+        public String formatar(){
+            return String.format("%dh%dm", hora, minuto);
+        }
+
 }

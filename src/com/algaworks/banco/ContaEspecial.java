@@ -8,9 +8,9 @@ public class ContaEspecial extends ContaInvestimento{
     private  double tafiraMensal;
     private double limiteChequeEspecial;
 
-    public ContaEspecial(){
-        super();
-
+    public ContaEspecial(Titular titular, int agencia, int numero, double tafiraMensal) {
+        super(titular, agencia, numero);
+        this.tafiraMensal = tafiraMensal;
     }
 
     public double getTafiraMensal() {

@@ -5,6 +5,11 @@ public class ContaInvestimento extends Conta{
 
     private double valorTotalRendimentos;
 
+    public ContaInvestimento(){
+        super(0);
+
+    }
+
     public double getValorTotalRendimentos(){
         return valorTotalRendimentos;
     }

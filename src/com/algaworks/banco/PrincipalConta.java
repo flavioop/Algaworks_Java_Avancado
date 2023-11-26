@@ -3,7 +3,7 @@ package com.algaworks.banco;
 public class PrincipalConta {
 
     public static void main(String[] args) {
-        Conta conta1 = new Conta();
+        Conta conta1 = new Conta(0);
         conta1.setTitular(new Titular("João da Silva", "12312312300"));
         conta1.setAgencia(1234);
         conta1.setNumero(999999);

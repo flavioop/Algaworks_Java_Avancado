@@ -8,6 +8,10 @@ public class ContaEspecial extends ContaInvestimento{
     private  double tafiraMensal;
     private double limiteChequeEspecial;
 
+    public ContaEspecial(){
+        super();
+
+    }
 
     public double getTafiraMensal() {
 

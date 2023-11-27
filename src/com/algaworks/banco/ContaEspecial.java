@@ -38,7 +38,7 @@ public class ContaEspecial extends ContaInvestimento{
         return getSaldo() + getLimiteChequeEspecial();
     }
     @Override
-    protected void validarSaldoParaSaque(double valorSaque){
+    protected final void validarSaldoParaSaque(double valorSaque){
         if (getSaldoDisponivel() < valorSaque) {
             throw new RuntimeException("Saldo insuficiente para saque");
         }
@@ -50,7 +50,7 @@ public class ContaEspecial extends ContaInvestimento{
             sacar(getTafiraMensal());
    }
     @Override
-    public void imprimirDemonstrativo() {
+    public final void imprimirDemonstrativo() {
 
         super.imprimirDemonstrativo();
 

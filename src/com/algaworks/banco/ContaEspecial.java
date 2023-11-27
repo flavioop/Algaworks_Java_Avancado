@@ -58,6 +58,18 @@ public class ContaEspecial extends ContaInvestimento{
 
     }
 
+    @Override
+    public String toString() {
+        return "ContaEspecial{" +
+                "titular=" + getTitular() +
+                ", agencia=" + getAgencia() +
+                ", numero=" + getNumero() +
+                ", valorTotalRendimento=" + getValorTotalRendimentos() +
+                ", tarifaMensal=" + tafiraMensal +
+                ", limiteChequeEspecial=" + limiteChequeEspecial +
+                '}';
+    }
+
 
 
 }

@@ -6,10 +6,14 @@ public class PrincipalConta {
 
         Titular titular = new Titular("João da Silva", "11122200069");
         Conta conta1 = new Conta(titular, 1234, 999999);
+        Conta conta2 = new Conta(titular, 1234, 999999);
 
         /*conta1.setTitular(new Titular("João da Silva", "12312312300"));
         conta1.setAgencia(1234);
         conta1.setNumero(999999);*/
+
+
+        System.out.println("As contas são iguais?" + conta1.equals(conta2));
 
         conta1.imprimirDemonstrativo();
 

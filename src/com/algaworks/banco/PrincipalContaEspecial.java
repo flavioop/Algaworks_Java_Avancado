@@ -10,10 +10,26 @@ public class PrincipalContaEspecial {
             conta1.setTafiraMensal(90);*/
 
 
-            Titular titular = new Titular("João da Silva", "11122200069");
-            ContaEspecial conta1 = new ContaEspecial(titular, 1234, 999999, 90);
+            /*Titular titular = new Titular("João da Silva", "11122200069");*/
+            CaixaEletronico caixaEletronico = new CaixaEletronico();
 
+
+            ContaEspecial conta1 = new ContaEspecial(new Titular( "João da Silva", "12342500087"), 999999,89254 ,90);
+
+            conta1.setLimiteChequeEspecial(1000);
+
+            ContaEspecial conta2 = new ContaEspecial(new Titular("Maria Joana", "22288800087"), 2222,88888,90);
+
+            ContaSalario conta3 = new ContaSalario(new Titular("Francisco Souza", "15715500387"), 3333,99999,18_000);
+
+            conta1.depositar(300);
+
+            caixaEletronico.trasferir(conta1,conta3, 50);
             conta1.imprimirDemonstrativo();
+            conta3.imprimirDemonstrativo();
+
+
+           /* conta1.imprimirDemonstrativo();
 
             conta1.depositar(100);
             conta1.imprimirDemonstrativo();
@@ -22,6 +38,6 @@ public class PrincipalContaEspecial {
             conta1.imprimirDemonstrativo();
 
             conta1.debitarTarifaMensal();
-            conta1.imprimirDemonstrativo();
+            conta1.imprimirDemonstrativo();*/
         }
 }

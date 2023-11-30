@@ -12,7 +12,7 @@ public class Titular {
         Objects.requireNonNull(cpf);
 
         this.nome = nome;
-        this.nome = cpf;
+        this.cpf = cpf;
     }
 
     public String getNome() {

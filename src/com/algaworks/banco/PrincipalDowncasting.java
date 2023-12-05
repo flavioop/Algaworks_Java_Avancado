@@ -8,7 +8,8 @@ public class PrincipalDowncasting {
 
         ContaEspecial conta1 = new ContaEspecial(new Titular("João Silva","22255588897"), 999999,89254 ,90);
         conta1.setLimiteChequeEspecial(1000);
-
+        conta1.depositar(100);
+        conta1.creditarRendimentos(10);
 
         ContaInvestimento conta2 = new ContaInvestimento(new Titular("João Silva","22255588897"), 1234,99999);
         conta2.depositar(100);
@@ -18,7 +19,7 @@ public class PrincipalDowncasting {
         conta3.depositar(100);
 
 
-        caixaEletronico.imprimirDemostrativo(conta3);
+        caixaEletronico.imprimirDemostrativo(conta1);
 
 
     }

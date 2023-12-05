@@ -44,6 +44,9 @@ public class Conta {
             return saldo;
         }
 
+        public boolean possuiGratuidadeImpressao(){
+            return false;
+        }
 
 
     protected void validarSaldoParaSaque(double valorSaque){

@@ -19,7 +19,7 @@ public class PrincipalDowncasting {
         conta3.depositar(100);
 
 
-        caixaEletronico.imprimirDemostrativo(conta3);
+        caixaEletronico.imprimirDemostrativo(conta1);
 
 
     }

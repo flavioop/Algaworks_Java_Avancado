@@ -1,14 +1,22 @@
 package com.algaworks.contaspagar.servico;
 
-import com.algaworks.contaspagar.servico.pagamento.*;
+
+import com.algaworks.contaspagar.servico.pagamento.DocumentoPagavel;
+import com.algaworks.contaspagar.servico.pagamento.MetodoPagamento;
 
 public class ServicoContaPagar {
 
+    private MetodoPagamento metodoPagamento;
+
+    public ServicoContaPagar(MetodoPagamento metodoPagamento) {
+        this.metodoPagamento = metodoPagamento;
+    }
+
     public void pagar(DocumentoPagavel documento){
 
-        Beneficiario beneficiario = documento.getBeneficiario();
+        //Beneficiario beneficiario = documento.getBeneficiario();
 
-        MetodoPagamento metodoPagamento = new Transferencia();
+
         metodoPagamento.pagar(documento);
 
     }

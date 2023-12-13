@@ -13,6 +13,7 @@ public class Beneficiario {
     }
 
     public String getNome() {
+
         return nome;
     }
 
@@ -21,26 +22,31 @@ public class Beneficiario {
     }
 
     public String getChavePix() {
+
         return chavePix;
     }
 
     public void setChavePix(String chavePix) {
+
         this.chavePix = chavePix;
     }
 
     public String getContaBancaria() {
+
         return contaBancaria;
     }
 
     public void setContaBancaria(String contaBancaria) {
+
         this.contaBancaria = contaBancaria;
     }
 
-    public boolean naoPossuiChavePix(){
+    public boolean naoPossuiChavePix()
+    {
         return getChavePix() == null || getChavePix().isEmpty();
     }
 
-    public boolean naoContaBancaria(){
+    public boolean naoPossuiContaBancaria(){
         return getContaBancaria() == null || getContaBancaria().isEmpty();
     }
 

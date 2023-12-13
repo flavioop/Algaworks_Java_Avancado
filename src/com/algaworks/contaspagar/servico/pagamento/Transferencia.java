@@ -8,7 +8,7 @@ public class Transferencia implements MetodoPagamento{
 
         Beneficiario beneficiario = documento.getBeneficiario();
 
-        if(beneficiario.naoPossuiChavePix()){
+        if(beneficiario.naoPossuiContaBancaria()){
             throw new RuntimeException("Benefeciario não conta bancaria");
         }
 

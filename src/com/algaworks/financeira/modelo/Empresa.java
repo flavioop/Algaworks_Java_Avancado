@@ -11,22 +11,25 @@ public abstract class Empresa {
     }
 
     public String getRazaoSocial() {
+
         return razaoSocial;
     }
 
     public void setRazaoSocial(String razaoSocial) {
+
         this.razaoSocial = razaoSocial;
     }
 
     public double getTotalFaturamento() {
+
         return totalFaturamento;
     }
 
     public void setTotalFaturamento(double totalFaturamento) {
+
         this.totalFaturamento = totalFaturamento;
     }
 
-    public abstract double calcularLimiteAprovado();
 
 
 }

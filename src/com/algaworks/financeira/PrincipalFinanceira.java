@@ -1,4 +1,6 @@
 package com.algaworks.financeira;
+import com.algaworks.financeira.modelo.Funcionario;
+import com.algaworks.financeira.modelo.ParceiroFinanceiro;
 import com.algaworks.financeira.servico.ServicoFinanciamento;
 import com.algaworks.financeira.modelo.Fazenda;
 import com.algaworks.financeira.modelo.Industria;
@@ -9,8 +11,10 @@ public class PrincipalFinanceira {
         var servicoFinancamento = new ServicoFinanciamento();
         var fazenda = new Fazenda("Fazenda Dona Benedita", 5_000_000, 5);
         var industria = new Industria("Alimentos da Vovó", 900_000, true);
+        var parceiro = new ParceiroFinanceiro("Capital ABC", 20000, 110000);
+        var funcionario = new Funcionario("João da Silva", 18_000);
 
-        servicoFinancamento.solicitarFinanciamento(fazenda, 600_000);
+        servicoFinancamento.solicitarFinanciamento(funcionario, 90_000);
         //servicoFinanciamento.solicitarFinanciamento(industria, 600_000);
     }
 

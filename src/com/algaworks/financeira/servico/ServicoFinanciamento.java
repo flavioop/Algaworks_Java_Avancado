@@ -1,9 +1,10 @@
 package com.algaworks.financeira.servico;
 import com.algaworks.financeira.modelo.Empresa;
+import com.algaworks.financeira.modelo.EmpresaFinanciavel;
 
 public class ServicoFinanciamento {
 
-    public void solicitarFinanciamento(Empresa empresa, double valorSolicitado){
+    public void solicitarFinanciamento(EmpresaFinanciavel empresa, double valorSolicitado){
         double limiteAprovado = empresa.calcularLimiteAprovado();
 
         if(limiteAprovado < valorSolicitado){
@@ -14,7 +15,7 @@ public class ServicoFinanciamento {
 
     }
 
-    public double consultarLimiteAprovado(Empresa empresa){
+    public double consultarLimiteAprovado(EmpresaFinanciavel empresa){
         return empresa.calcularLimiteAprovado();
 
     }

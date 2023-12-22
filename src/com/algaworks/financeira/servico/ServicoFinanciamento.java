@@ -1,11 +1,11 @@
 package com.algaworks.financeira.servico;
-import com.algaworks.financeira.modelo.Empresa;
-import com.algaworks.financeira.modelo.EmpresaFinanciavel;
 
-public class ServicoFinanciamento {
+import com.algaworks.financeira.modelo.ClienteFinanciavel;
 
-    public void solicitarFinanciamento(EmpresaFinanciavel empresa, double valorSolicitado){
-        double limiteAprovado = empresa.calcularLimiteAprovado();
+public class ServicoFinanciamento{
+
+    public void solicitarFinanciamento(ClienteFinanciavel cliente, double valorSolicitado){
+        double limiteAprovado = cliente.calcularLimiteAprovado();
 
         if(limiteAprovado < valorSolicitado){
             throw new RuntimeException(String.format("Financiamento não aprovado. Limite máximo de %.2f", limiteAprovado));
@@ -15,11 +15,10 @@ public class ServicoFinanciamento {
 
     }
 
-    public double consultarLimiteAprovado(EmpresaFinanciavel empresa){
+    public double consultarLimiteAprovado(ClienteFinanciavel empresa){
         return empresa.calcularLimiteAprovado();
 
     }
-
 
 
 }

@@ -1,14 +1,24 @@
 package com.algaworks.financeira.modelo;
 
-public class Funcionario extends EmpresaFinanciavel{
+public class Funcionario implements ClienteFinanciavel{
 
-    private  double salarioMensal;
+
     public static final int QUANTIDADE_SALARIOS_LIMITE_CREDITO = 5;
 
+    private String nome;
+    private double salarioMensal;
 
     public Funcionario(String nome, double salarioMensal) {
-        super(nome, 0);
+        this.nome = nome;
         this.salarioMensal = salarioMensal;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNome() {
+        return nome;
     }
 
     public double getSalarioMensal() {
@@ -21,6 +31,7 @@ public class Funcionario extends EmpresaFinanciavel{
 
     @Override
     public double calcularLimiteAprovado() {
+
         return getSalarioMensal() * QUANTIDADE_SALARIOS_LIMITE_CREDITO;
     }
 }

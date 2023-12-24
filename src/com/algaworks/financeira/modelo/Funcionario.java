@@ -26,6 +26,7 @@ public class Funcionario implements ClienteFinanciavel{
     }
 
     public void setSalarioMensal(double salarioMensal) {
+
         this.salarioMensal = salarioMensal;
     }
 
@@ -34,4 +35,6 @@ public class Funcionario implements ClienteFinanciavel{
 
         return getSalarioMensal() * QUANTIDADE_SALARIOS_LIMITE_CREDITO;
     }
+
+
 }

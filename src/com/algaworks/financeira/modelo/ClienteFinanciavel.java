@@ -16,11 +16,10 @@ public interface ClienteFinanciavel {
         return 2.0;
     }
 
-    private static boolean isFinanciamentioGrandeValor(double valorSolicitado) {
+    static boolean isFinanciamentioGrandeValor(double valorSolicitado) {
         return valorSolicitado <= 1_000_000;
     }
-
-    private static boolean isFinanciamentoMedioValor(double valorSolicitado) {
+    static boolean isFinanciamentoMedioValor(double valorSolicitado) {
         return valorSolicitado <= 100_000;
     }
     

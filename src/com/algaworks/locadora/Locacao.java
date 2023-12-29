@@ -1,17 +1,55 @@
 package com.algaworks.locadora;
 
-public abstract class Locacao {
+import java.util.Objects;
+
+public class Locacao {
 
     private Notebook notebook;
+    private Precificacao precificacao;
+    private Seguro seguro;
 
-    public Locacao(Notebook notebook){
+    public Locacao(Notebook notebook, Precificacao precificacao){
+        Objects.requireNonNull(notebook);
+        Objects.requireNonNull(precificacao);
         this.notebook = notebook;
+        this.precificacao = precificacao;
+    }
+
+    public Locacao(Notebook notebook, Precificacao precificacao, Seguro seguro) {
+        this(notebook,precificacao);
+        this.seguro = seguro;
+    }
+
+    public Seguro getSeguro() {
+        return seguro;
     }
 
     public Notebook getNotebook() {
         return notebook;
     }
 
-    public abstract double calcularValorDevido(int horasUtilizadas);
+    public Precificacao getPrecificacao() {
+        return precificacao;
+    }
+
+    public void setPrecificacao(Precificacao precificacao) {
+        this.precificacao = precificacao;
+    }
+
+    public boolean temSeguro() {
+        return getSeguro() != null;
+    }
+
+    public  double calcularValorDevido(int horasUtilizadas){
+        double valorTotal = getPrecificacao().calcularValorTotal(getNotebook(), horasUtilizadas);
+
+        if (temSeguro()) {
+            valorTotal += getSeguro().calcularPremio(horasUtilizadas, valorTotal);
+        }
+
+        return valorTotal;
+
+    }
+
 
 }

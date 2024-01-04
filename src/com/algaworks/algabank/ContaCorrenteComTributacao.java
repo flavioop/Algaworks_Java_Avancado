@@ -3,32 +3,48 @@ package com.algaworks.algabank;
 import com.algaworks.algabank.javabank.Conta;
 import com.algaworks.algabank.javabank.ContaCorrente;
 
-public class ContaCorrenteComTributacao extends ContaCorrente {
+public class ContaCorrenteComTributacao implements Conta {
 
     public static final double TAXA_IMPOSTO_MOVIMENTACAO = 0.1;
 
-    @Override
-    public void sacar(double valor) {
-        super.sacar(valor);
-        sacarTarifa(valor * TAXA_IMPOSTO_MOVIMENTACAO);
+    private Conta contaOriginal;
+
+    public ContaCorrenteComTributacao(Conta contaOriginal) {
+        this.contaOriginal = contaOriginal;
     }
 
-    /*@Override
+    @Override
+    public double getSaldo() {
+        return contaOriginal.getSaldo();
+    }
+
+    @Override
+    public void sacar(double valor) {
+        contaOriginal.sacar(valor);
+        debitarImpostoMovimentacao(valor);
+    }
+
+    @Override
+    public void depositar(double valor) {
+        contaOriginal.depositar(valor);
+    }
+
+    @Override
     public void transferir(Conta conta, double valor) {
-        super.transferir(conta, valor);
-        super.sacar(valor * TAXA_IMPOSTO_MOVIMENTACAO);
-    }*/
+        contaOriginal.transferir(conta, valor);
+        debitarImpostoMovimentacao(valor);
+    }
     @Override
     public void aplicarEmInvestimento(double valor){
-        super.aplicarEmInvestimento(valor);
-        sacarTarifa(valor * TAXA_IMPOSTO_MOVIMENTACAO);
+        contaOriginal.aplicarEmInvestimento(valor);
+        debitarImpostoMovimentacao(valor);
     }
 
     public void sacarTarifa(double valorMovimentacao) {
-        super.sacar(valorMovimentacao * TAXA_IMPOSTO_MOVIMENTACAO);
+        contaOriginal.sacar(valorMovimentacao * TAXA_IMPOSTO_MOVIMENTACAO);
     }
 
-
-
-
+    public void debitarImpostoMovimentacao(double valorMovimentacao) {
+        contaOriginal.sacar(valorMovimentacao * TAXA_IMPOSTO_MOVIMENTACAO);
+    }
 }

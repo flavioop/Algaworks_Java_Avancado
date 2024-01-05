@@ -6,11 +6,13 @@ public class ContaCorrente implements Conta {
 
     @Override
     public double getSaldo() {
+
         return saldo;
     }
 
     @Override
     public void sacar(double valor) {
+
         this.saldo -= valor;
     }
 
@@ -24,16 +26,16 @@ public class ContaCorrente implements Conta {
     public void transferir(Conta conta, double valor) {
         //this.saldo -= valor;
         sacar(valor);
-        sacarTarifa(15);
+        //sacarTarifa(0.20);
         conta.depositar(valor);
 
     }
 
     @Override
     public void aplicarEmInvestimento(double valor){
-       sacar(valor);
+       //sacar(valor);
 
-        //this.saldo -= valor;
+        this.saldo -= valor;
     }
 
 

@@ -48,4 +48,10 @@ public abstract class ContaBaseDecorator implements Conta {
     public void setContaOriginal(Conta contaOriginal) {
         this.contaOriginal = contaOriginal;
     }
+
+
+    @Override
+    public void imprimirSaldo() {
+        contaOriginal.imprimirSaldo();
+    }
 }

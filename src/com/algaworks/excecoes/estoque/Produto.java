@@ -67,8 +67,7 @@ public class Produto {
             throw new IllegalArgumentException("Quantidade invalida, estoque negativo");
         }
 
-
-        this.quantidadeEstoque -= quantidade;
+        /*this.quantidadeEstoque -= quantidade;*/
 
 
     }

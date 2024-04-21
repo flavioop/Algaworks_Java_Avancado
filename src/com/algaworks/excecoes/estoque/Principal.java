@@ -8,8 +8,9 @@ public class Principal {
     public static void main(String[] args) {
 
         Produto produto = new Produto("Apple Watch");
+
+        //produto.ativar();
         produto.adicionarEstoque(100);;
-        produto.ativar();
 
         /*produto.retirarEstoque(5);
 
@@ -32,9 +33,19 @@ public class Principal {
 
                 break;
             } catch (IllegalArgumentException iae) {
-
                 System.out.println("Erro na compra: " + iae.getMessage());
-            }
+            } catch (IllegalStateException ise) {
+                System.out.println("Erro na compra: " + ise.getMessage());
+
+                System.out.println("Deseja ativar o produto?");
+
+                if (scanner.nextBoolean()){
+                    produto.ativar();
+                }else{
+                    System.out.println("OK. compra não pode ser realizada");
+                    break;
+                }
+        }
 
         } while (true);
     }

@@ -8,7 +8,7 @@ public class Principal {
     public static void main(String[] args) {
 
         Produto produto = new Produto("Apple Watch");
-        produto.adicionarEstoque(10);;
+        produto.adicionarEstoque(100);;
         produto.ativar();
 
         /*produto.retirarEstoque(5);
@@ -18,25 +18,37 @@ public class Principal {
         comprar(produto);
     }
 
-    private static void comprar(Produto produto){
+    private static void comprar(Produto produto) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Quantidade: ");
-        int quantidade = scanner.nextInt();
 
-        efetuarBaixaEstoque(produto, quantidade);
-        System.out.println("Compra realizada");
+        do {
+            try {
 
+                System.out.println("Quantidade: ");
+                int quantidade = scanner.nextInt();
+
+                efetuarBaixaEstoque(produto, quantidade);
+                System.out.println("Compra realizada");
+
+                break;
+            } catch (IllegalArgumentException iae) {
+
+                System.out.println("Erro na compra: " + iae.getMessage());
+            }
+
+        } while (true);
     }
 
+
     private static void efetuarBaixaEstoque(Produto produto, int quantidade){
-        try {
+        //try {
             produto.retirarEstoque(quantidade);
             System.out.printf("%d unidades retiradas do estoque. Estoque atual: %d%n", quantidade, produto.getQuantidadeEstoque());
 
-        }catch (IllegalArgumentException iae){
-            System.out.println("Erro ao efetuar baixa no estoque: " + iae.getMessage());
-
-        }
+        //}catch (IllegalArgumentException iae){
+          //  System.out.println("Erro ao efetuar baixa no estoque: " + iae.getMessage());
+            //throw iae;
+        //}
 
     }
 

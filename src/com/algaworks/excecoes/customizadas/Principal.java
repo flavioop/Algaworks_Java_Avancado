@@ -34,7 +34,8 @@ public class Principal {
             } catch (IllegalArgumentException iae) {
                 System.out.println("Erro na compra: " + iae.getMessage());
             } catch(ProdutoSemEstoqueException e){
-                System.out.println("Erro na compra: " + e.getMessage());
+                System.out.printf("Erro na compra: %s. Estoque disponivel: %d. Estoque necessário: %d%n", e.getMessage(), e.getEstoqueDisponivel(), e.getEstoqueNecessario());
+
             } catch (ProdutoInativoException e) {
                 System.out.println("Erro na compra: " + e.getMessage());
 
@@ -63,10 +64,4 @@ public class Principal {
         //}
 
     }
-
-
-
-
-
-
 }

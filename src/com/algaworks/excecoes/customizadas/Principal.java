@@ -31,12 +31,12 @@ public class Principal {
                 System.out.println("Compra realizada");
 
                 break;
-            } catch (IllegalArgumentException iae) {
-                System.out.println("Erro na compra: " + iae.getMessage());
+            } catch (BaixaEstoqueException e) {
+                System.out.println("Erro na compra: " + e.getMessage());
 
 
            /* catch(ProdutoSemEstoqueException e){
-                System.out.printf("Erro na compra: %s. Estoque disponivel: %d. Estoque necessário: %d%n", e.getMessage(), e.getEstoqueDisponivel(), e.getEstoqueNecessario());*/
+                System.out.printf("Erro na compra: %s. Estoque disponivel: %d. Estoque necessário: %d%n", e.getMessage(), e.getEstoqueDisponivel(), e.getEstoqueNecessario());
 
             } catch (ProdutoInativoException e) {
                 System.out.println("Erro na compra: " + e.getMessage());
@@ -51,23 +51,25 @@ public class Principal {
                 }
 
             }catch (ProdutoException e){
-                /*System.out.println(e.getClass().getName());*/
-                System.out.println("Erro na compra: " + e.getMessage());
+                System.out.println(e.getClass().getName());
+                System.out.println("Erro na compra: " + e.getMessage());*/
         }
 
         } while (true);
     }
 
 
-    private static void efetuarBaixaEstoque(Produto produto, int quantidade) throws ProdutoSemEstoqueException, ProdutoInativoException {
-        //try {
+    private static void efetuarBaixaEstoque(Produto produto, int quantidade) throws BaixaEstoqueException {
+        try {
             produto.retirarEstoque(quantidade);
             System.out.printf("%d unidades retiradas do estoque. Estoque atual: %d%n", quantidade, produto.getQuantidadeEstoque());
 
-        //}catch (IllegalArgumentException iae){
+        }catch(IllegalArgumentException e){
+            throw new BaixaEstoqueException("Erro ao realiza baixa estoque");
+        }catch (ProdutoException e ){
           //  System.out.println("Erro ao efetuar baixa no estoque: " + iae.getMessage());
-            //throw iae;
-        //}
+            throw new BaixaEstoqueException("Erro ao realizar baixa estoque") ;
+        }
 
     }
 }

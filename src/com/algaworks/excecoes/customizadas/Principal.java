@@ -8,7 +8,7 @@ public class Principal {
 
         Produto produto = new Produto("Apple Watch");
 
-        //produto.ativar();
+        produto.ativar();
         produto.adicionarEstoque(100);;
 
         /*produto.retirarEstoque(5);
@@ -32,7 +32,8 @@ public class Principal {
 
                 break;
             } catch (BaixaEstoqueException e) {
-                System.out.println("Erro na compra: " + e.getMessage());
+                System.out.println("Erro na compra: " + e.getCause().getMessage());
+                //e.printStackTrace();
 
 
            /* catch(ProdutoSemEstoqueException e){
@@ -65,10 +66,10 @@ public class Principal {
             System.out.printf("%d unidades retiradas do estoque. Estoque atual: %d%n", quantidade, produto.getQuantidadeEstoque());
 
         }catch(IllegalArgumentException e){
-            throw new BaixaEstoqueException("Erro ao realiza baixa estoque");
+            throw new BaixaEstoqueException("Erro ao realiza baixa estoque",e);
         }catch (ProdutoException e ){
           //  System.out.println("Erro ao efetuar baixa no estoque: " + iae.getMessage());
-            throw new BaixaEstoqueException("Erro ao realizar baixa estoque") ;
+            throw new BaixaEstoqueException("Erro ao realizar baixa estoque", e) ;
         }
 
     }
